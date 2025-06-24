@@ -50,14 +50,14 @@ For a known shift constant `b` and rate parameter `λ`:
 
 ### 📌 Key Results:
 
-- **Normalization Constant:** `a = λ`
-- **Mean:** $E[X] = (1 / λ) + b$
-- **Variance:** $Var(X) = 1 / λ^2$
-- **Standard Deviation:** $σ = 1 / λ$
+- **Normalization Constant:** $a = λ$
+- **Mean:** $E[X]$ = $(1 / λ) + b$
+- **Variance:** $Var(X)$ = $1 / λ^2$
+- **Standard Deviation:** $σ$ = $1 / λ$
 - **CDF:**  
-  $F(x) = 1 - exp(-λ * (x - b))$ for $x ≥ b$
+  $F(x)$ = $1 - exp(-λ * (x - b))$ for $x ≥ b$
 - **Quantile Function:**  
-  $Q(p) = b - (1/λ) * log(1 - p)$
+  $Q(p)$ = $b - (1/λ) * log(1 - p)$
 - **MLE for λ:**  
   Given a sample of size `n`:  
   $λ_MLE = n / sum(X_i - b)$
@@ -102,19 +102,19 @@ Let X = Number of red balls drawn - Number of blue balls drawn
 X ∈ { -2, 0, 2 }
 
 📊 Probability Mass Function (PMF):
-$P(X = 2) = \frac{a(a-1)}{(a+b)(a+b-1)}$
+- $P(X = 2)$ = $\frac{a(a-1)}{(a+b)(a+b-1)}$
 
-$P(X = 0) = \frac{2ab}{(a+b)(a+b-1)}$
+- $P(X = 0)$ = $\frac{2ab}{(a+b)(a+b-1)}$
 
-$P(X = -2) = \frac{b(b-1)}{(a+b)(a+b-1)}$
+- $P(X = -2)$ = $\frac{b(b-1)}{(a+b)(a+b-1)}$
 
 
 📈 Expectation and Variance:
 Expectation:
-$E[X] = [ 2a(a - 1) - 2b(b - 1) ] / [ (a + b)(a + b - 1) ]$
+$E[X]$ = $[ 2a(a - 1) - 2b(b - 1) ] / [ (a + b)(a + b - 1) ]$
 
 Variance:
-$Var(X) = [ 4a(a - 1) + 4b(b - 1) ] / [ (a + b)(a + b - 1) ] - [E[X]]^2$
+$Var(X)$ = $[ 4a(a - 1) + 4b(b - 1) ] / [ (a + b)(a + b - 1) ] - [E[X]]^2$
 
 📏 Central Limit Theorem Demonstration
 Conducts repeated sampling of X to demonstrate the Central Limit Theorem (CLT).
