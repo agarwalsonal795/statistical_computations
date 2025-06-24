@@ -102,11 +102,18 @@ Let X = Number of red balls drawn - Number of blue balls drawn
 X ∈ { -2, 0, 2 }
 
 📊 Probability Mass Function (PMF):
-```P(X = 2) = [ a * (a - 1) ] / [ (a + b) * (a + b - 1) ]```
+$$
+P(X = 2) = \frac{a(a-1)}{(a+b)(a+b-1)}
+$$
 
-```P(X = 0) = [ 2 * a * b ] / [ (a + b) * (a + b - 1) ]```
+$$
+P(X = 0) = \frac{2ab}{(a+b)(a+b-1)}
+$$
 
-```P(X = -2) = [ b * (b - 1) ] / [ (a + b) * (a + b - 1) ]```
+$$
+P(X = -2) = \frac{b(b-1)}{(a+b)(a+b-1)}
+$$
+
 
 📈 Expectation and Variance:
 Expectation:
