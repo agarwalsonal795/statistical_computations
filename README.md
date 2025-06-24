@@ -90,3 +90,218 @@ MLE_lambda <- function(data, b) {
 bootstrap_res <- boot(data = df$TimeLength, statistic = MLE_lambda, R = 10000)
 boot_cnf <- boot.ci(bootstrap_res, type = "perc")
 ```
+🎯 Simulation Study:
+Simulate samples from the shifted exponential distribution.
+
+Plot Mean Squared Error (MSE) of λ estimation vs. sample size.
+```
+ggplot(mse_data, aes(x = SampleSize, y = MSE)) +
+  geom_line(color = "red") +
+  labs(title = "Mean Squared Error of lambda vs Sample Size",
+       x = "Sample Size (n)",
+       y = "Mean Squared Error (MSE)") +
+  theme_minimal()
+```
+🎲 Section B.2: Drawing Balls from a Bag
+Problem Setup:
+A bag contains a red balls and b blue balls, where a ≥ 1 and b > 1.
+
+Two balls are drawn without replacement.
+
+Let X = Number of red balls drawn - Number of blue balls drawn
+
+📌 Possible Values of X:
+𝑋
+∈
+{
+−
+2
+,
+0
+,
+2
+}
+X∈{−2,0,2}
+
+📊 Probability Mass Function (PMF):
+𝑃
+(
+𝑋
+=
+2
+)
+=
+𝑎
+(
+𝑎
+−
+1
+)
+(
+𝑎
++
+𝑏
+)
+(
+𝑎
++
+𝑏
+−
+1
+)
+P(X=2)= 
+(a+b)(a+b−1)
+a(a−1)
+​
+ 
+
+𝑃
+(
+𝑋
+=
+0
+)
+=
+2
+𝑎
+𝑏
+(
+𝑎
++
+𝑏
+)
+(
+𝑎
++
+𝑏
+−
+1
+)
+P(X=0)= 
+(a+b)(a+b−1)
+2ab
+​
+ 
+
+𝑃
+(
+𝑋
+=
+−
+2
+)
+=
+𝑏
+(
+𝑏
+−
+1
+)
+(
+𝑎
++
+𝑏
+)
+(
+𝑎
++
+𝑏
+−
+1
+)
+P(X=−2)= 
+(a+b)(a+b−1)
+b(b−1)
+​
+ 
+
+📈 Expectation and Variance:
+Expected Value (E[X]):
+
+𝐸
+[
+𝑋
+]
+=
+2
+𝑎
+(
+𝑎
+−
+1
+)
+−
+2
+𝑏
+(
+𝑏
+−
+1
+)
+(
+𝑎
++
+𝑏
+)
+(
+𝑎
++
+𝑏
+−
+1
+)
+E[X]= 
+(a+b)(a+b−1)
+2a(a−1)−2b(b−1)
+​
+ 
+Variance (Var(X)):
+
+𝑉
+𝑎
+𝑟
+(
+𝑋
+)
+=
+4
+𝑎
+(
+𝑎
+−
+1
+)
++
+4
+𝑏
+(
+𝑏
+−
+1
+)
+(
+𝑎
++
+𝑏
+)
+(
+𝑎
++
+𝑏
+−
+1
+)
+−
+[
+𝐸
+[
+𝑋
+]
+]
+2
+Var(X)= 
+(a+b)(a+b−1)
+4a(a−1)+4b(b−1)
+​
+ −[E[X]] 
+2
