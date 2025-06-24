@@ -60,7 +60,7 @@ For a known shift constant `b` and rate parameter `λ`:
   $Q(p)$ = $b - (1/λ) * log(1 - p)$
 - **MLE for λ:**  
   Given a sample of size `n`:  
-  $λ_MLE = n / sum(X_i - b)$
+  $λ_MLE = \frac{n}{sum(X_i - b)}$
 - **Bootstrap Confidence Intervals:**  
   Using the **boot** package in R.
 
