@@ -51,13 +51,13 @@ For a known shift constant `b` and rate parameter `λ`:
 ### 📌 Key Results:
 
 - **Normalization Constant:** $a = λ$
-- **Mean:** $E[X]$ = $(1 / λ) + b$
-- **Variance:** $Var(X)$ = $1 / λ^2$
-- **Standard Deviation:** $σ$ = $1 / λ$
+- **Mean:** $E[X]$ = $\frac{(1}{λ)} + b$
+- **Variance:** $Var(X)$ = $\frac{1}{λ^2}$
+- **Standard Deviation:** $σ$ = \frac{1}{λ}$
 - **CDF:**  
   $F(x)$ = $1 - exp(-λ * (x - b))$ for $x ≥ b$
 - **Quantile Function:**  
-  $Q(p)$ = $b - (1/λ) * log(1 - p)$
+  $Q(p)$ = $b - \frac{(1}{λ)} * log(1 - p)$
 - **MLE for λ:**  
   Given a sample of size `n`:  
   $λ_MLE = \frac{n}{sum(X_i - b)}$
@@ -111,10 +111,10 @@ X ∈ { -2, 0, 2 }
 
 📈 Expectation and Variance:
 Expectation:
-$E[X]$ = $[ 2a(a - 1) - 2b(b - 1) ] / [ (a + b)(a + b - 1) ]$
+$E[X]$ = $\frac{[ 2a(a - 1) - 2b(b - 1) ]}{[ (a + b)(a + b - 1) ]}$
 
 Variance:
-$Var(X)$ = $[ 4a(a - 1) + 4b(b - 1) ] / [ (a + b)(a + b - 1) ] - [E[X]]^2$
+$Var(X)$ = $\frac{[ 4a(a - 1) + 4b(b - 1) ]}{[ (a + b)(a + b - 1) ]} - [E[X]]^2$
 
 📏 Central Limit Theorem Demonstration
 Conducts repeated sampling of X to demonstrate the Central Limit Theorem (CLT).
