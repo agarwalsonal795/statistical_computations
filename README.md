@@ -51,13 +51,13 @@ For a known shift constant `b` and rate parameter `λ`:
 ### 📌 Key Results:
 
 - **Normalization Constant:** $a = λ$
-- **Mean:** $E[X]$ = $\frac{(1}{λ)} + b$
+- **Mean:** $E[X]$ = $\frac{1{λ)} + b$
 - **Variance:** $Var(X)$ = $\frac{1}{λ^2}$
 - **Standard Deviation:** $σ$ = \frac{1}{λ}$
 - **CDF:**  
   $F(x)$ = $1 - exp(-λ * (x - b))$ for $x ≥ b$
 - **Quantile Function:**  
-  $Q(p)$ = $b - \frac{(1}{λ)} * log(1 - p)$
+  $Q(p)$ = $b - \frac{1}{λ} * log(1 - p)$
 - **MLE for λ:**  
   Given a sample of size `n`:  
   $λ_MLE = \frac{n}{sum(X_i - b)}$
