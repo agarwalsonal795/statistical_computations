@@ -50,10 +50,10 @@ For a known shift constant `b` and rate parameter `λ`:
 
 ### 📌 Key Results:
 
-- **Normalization Constant:** $a = λ$
-- **Mean:** $E[X]$ = $\frac{1{λ)} + b$
-- **Variance:** $Var(X)$ = $\frac{1}{λ^2}$
-- **Standard Deviation:** $σ$ = \frac{1}{λ}$
+- **Normalization Constant:** a = λ
+- **Mean:** $E[X] = \frac{1}{λ} + b$
+- **Variance:** $Var(X) = \frac{1}{λ^2}$
+- **Standard Deviation:** $σ = \frac{1}{λ}$
 - **CDF:**  
   $F(x)$ = $1 - exp(-λ * (x - b))$ for $x ≥ b$
 - **Quantile Function:**  
