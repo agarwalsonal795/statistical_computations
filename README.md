@@ -70,10 +70,10 @@ For a known shift constant `b` and rate parameter `λ`:
 
 ```r
 # MLE for lambda
-$MLE_lambda <- function(data, b) {
+MLE_lambda <- function(data, b) {
   n <- length(data)
   return(n / sum(data - b))
-}$
+}
 
 # Bootstrap confidence interval
 bootstrap_res <- boot(data = df$TimeLength, statistic = MLE_lambda, R = 10000)
@@ -102,17 +102,11 @@ Let X = Number of red balls drawn - Number of blue balls drawn
 X ∈ { -2, 0, 2 }
 
 📊 Probability Mass Function (PMF):
-$$
-P(X = 2) = \frac{a(a-1)}{(a+b)(a+b-1)}
-$$
+$P(X = 2) = \frac{a(a-1)}{(a+b)(a+b-1)}$
 
-$$
-P(X = 0) = \frac{2ab}{(a+b)(a+b-1)}
-$$
+$P(X = 0) = \frac{2ab}{(a+b)(a+b-1)}$
 
-$$
-P(X = -2) = \frac{b(b-1)}{(a+b)(a+b-1)}
-$$
+$P(X = -2) = \frac{b(b-1)}{(a+b)(a+b-1)}$
 
 
 📈 Expectation and Variance:
