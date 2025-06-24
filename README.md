@@ -51,16 +51,16 @@ For a known shift constant `b` and rate parameter `λ`:
 ### 📌 Key Results:
 
 - **Normalization Constant:** `a = λ`
-- **Mean:** `E[X] = (1 / λ) + b`
-- **Variance:** `Var(X) = 1 / λ^2`
-- **Standard Deviation:** `σ = 1 / λ`
+- **Mean:** $E[X] = (1 / λ) + b$
+- **Variance:** $Var(X) = 1 / λ^2$
+- **Standard Deviation:** $σ = 1 / λ$
 - **CDF:**  
-  `F(x) = 1 - exp(-λ * (x - b))` for `x ≥ b`
+  $F(x) = 1 - exp(-λ * (x - b))$ for $x ≥ b$
 - **Quantile Function:**  
-  `Q(p) = b - (1/λ) * log(1 - p)`
+  $Q(p) = b - (1/λ) * log(1 - p)$
 - **MLE for λ:**  
   Given a sample of size `n`:  
-  `λ_MLE = n / sum(X_i - b)`
+  $λ_MLE = n / sum(X_i - b)$
 - **Bootstrap Confidence Intervals:**  
   Using the **boot** package in R.
 
@@ -70,10 +70,10 @@ For a known shift constant `b` and rate parameter `λ`:
 
 ```r
 # MLE for lambda
-MLE_lambda <- function(data, b) {
+$MLE_lambda <- function(data, b) {
   n <- length(data)
   return(n / sum(data - b))
-}
+}$
 
 # Bootstrap confidence interval
 bootstrap_res <- boot(data = df$TimeLength, statistic = MLE_lambda, R = 10000)
@@ -117,10 +117,10 @@ $$
 
 📈 Expectation and Variance:
 Expectation:
-```E[X] = [ 2a(a - 1) - 2b(b - 1) ] / [ (a + b)(a + b - 1) ]```
+$E[X] = [ 2a(a - 1) - 2b(b - 1) ] / [ (a + b)(a + b - 1) ]$
 
 Variance:
-```Var(X) = [ 4a(a - 1) + 4b(b - 1) ] / [ (a + b)(a + b - 1) ] - [E[X]]^2```
+$Var(X) = [ 4a(a - 1) + 4b(b - 1) ] / [ (a + b)(a + b - 1) ] - [E[X]]^2$
 
 📏 Central Limit Theorem Demonstration
 Conducts repeated sampling of X to demonstrate the Central Limit Theorem (CLT).
